@@ -90,7 +90,7 @@
 # 	print('party')
 # else:
 # 	print('have a rest')
-
+#qwe
 x=int(input('какая температура ?'))
 if x < 10 :
 	print('ПРОХЛАДНО')
