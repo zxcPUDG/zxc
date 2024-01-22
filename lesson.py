@@ -90,14 +90,23 @@
 # 	print('party')
 # else:
 # 	print('have a rest')
-#qwe
-x=int(input('какая температура ?'))
-if x < 10 :
-	print('ПРОХЛАДНО')
-elif x < 30:
-	print('ТЕПЛО')
-elif x >= 30:
-	print('ЖАРКО')
+# #qwe
+# x=int(input('какая температура ?'))
+# if x < 10 :
+# 	print('ПРОХЛАДНО')
+# elif x < 30:
+# 	print('ТЕПЛО')
+# elif x >= 30:
+# 	print('ЖАРКО')
+
+login=['shadow fiend' ,'pudge' ,'zxc']
+password=['ezmid','123zxc','qwe']
+your_login=input('login:')
+your_password=input('password:')
+i=2
+while your_login==login[i]:
+	if your_password==password[i]:
+		
 
 
 
