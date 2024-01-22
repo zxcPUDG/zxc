@@ -90,7 +90,7 @@
 # 	print('party')
 # else:
 # 	print('have a rest')
-# #qwe
+#qwe
 # x=int(input('какая температура ?'))
 # if x < 10 :
 # 	print('ПРОХЛАДНО')
@@ -98,6 +98,26 @@
 # 	print('ТЕПЛО')
 # elif x >= 30:
 # 	print('ЖАРКО')
+# login=['shadow fiend' ,'pudge' ,'zxc']
+# password=['ezmid','123zxc','qwe']
+# your_login=input('login:')
+# your_password=input('password:')
+# i=2
+# while i>=0:
+#     if your_login==login[i]:
+#         if your_password==password[i]:
+#             print('success')
+#     i=i-1
+
+
+# login=['shadow fiend' ,'pudge' ,'zxc']
+# password=['ezmid','123zxc','qwe']
+# your_login=input('login:')
+# your_password=input('password:')
+# for i in range(3):
+#     if your_login==login[i]:
+#         if your_password==password[i]:
+#             print('success')
 
 # login=['shadow fiend' ,'pudge' ,'zxc']
 # password=['ezmid','123zxc','qwe']
@@ -109,7 +129,50 @@
 #         if your_password==password[i]:
 #             print('success')
 #     i=i-1
-		
+#     if i<0:
+#         break
+#     print(i)
+# else:
+#     print('ghost hz')
+
+# login=['shadow fiend' ,'pudge' ,'zxc']
+# password=['ezmid','123zxc','qwe']
+# your_login=input('login:')
+# your_password=input('password:')
+# i=2
+# while i>=0:
+#     if your_login==login[i]:
+#         if your_password==password[i]:
+#             print('success')
+#     i=i-1
+#     print(i)
+# else:
+#     print('ghost of kiev is kall ')
+
+login=['shadow fiend' ,'pudge' ,'zxc']
+password=['ezmid','123zxc','qwe']
+while True:
+    cmd=input('напиши "lognin" чтобы зайти  или "reg" чтоб зарегистрироваться: ')
+    if cmd=='logncin':    
+        your_login=input('login: ')
+        your_password=input('password: ')
+        for i in range(len(login)):
+                if your_login==login[i]:
+                    if your_password==password[i]:
+                        print('success')
+        # else:
+        #     print('ghost of kiev is kall ')
+    elif cmd=='reg':
+        login_reg=input('придумай никнейм: ')
+        password_reg=input('придумай пароль: ')
+        login.append(login_reg)
+        password.append(password_reg)
+        print('вы зарегистрированы')
+        
+
+
+    
+
 
 
 
