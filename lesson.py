@@ -172,14 +172,7 @@
 #         login.append(login_reg)
 #         password.append(password_reg)
 #         print('вы зарегистрированы')
-i=-1
-p=0
-for l in range(0,12):
-    i=i+2
-    p=p+2
-    print(i,'первый')
-    print(p, 'второй')
-print(p , 'расчет окончен')
+
         
 
 
