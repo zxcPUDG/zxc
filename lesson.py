@@ -135,7 +135,6 @@
 # else:
 #     print('ghost hz')
 
-
 # login=['shadow fiend' ,'pudge' ,'zxc']
 # password=['ezmid','123zxc','qwe']
 # your_login=input('login:')
@@ -149,49 +148,38 @@
 #     print(i)
 # else:
 #     print('ghost of kiev is kall ')
-def password_c():
-    n_password=input('new password: ')
-    password[i]=n_password
-    print(password, i)
-    print('password has been changed')
-    return password
-def login_c():
-    n_login=input('new login: ')
-    login[i]=n_login
-    print(login, i)
-    print('login has been changed')
-    return login
-
-login=['shadow fiend' ,'pudge' ,'zxc']
-password=['ezmid','123zxc','qwe']
-
-while True:
-    cmd=input('напиши "login" чтобы зайти  или "reg" чтоб зарегистрироваться: ')
-    if cmd=='login':    
-        your_login=input('login: ')
-        your_password=input('password: ')
-        for i in range(len(login)):
-                if your_login==login[i]:
-                    if your_password==password[i]:
-                        print('success')
-                        exit=False
-                        while exit==False:
-                            cmd=input('change password or change login or logout?: ')
-                            if cmd=='change password':
-                                password=password_c()
-                            if cmd=='logout':
-                                exit=True
-                            if cmd=='change login':
-                                login=login_c()
-                        else:
-                            break                       
-    elif cmd=='reg':
-        login_reg=input('придумай никнейм: ')
-        password_reg=input('придумай пароль: ')
-        login.append(login_reg)
-        password.append(password_reg)
-        print('вы зарегистрированы')
-
+# def passch():
+#      np=password[i]
+# login=['shadow fiend' ,'pudge' ,'zxc']
+# password=['ezmid','123zxc','qwe']
+# exit=False
+# while True:
+#     cmd=input('напиши "lognin" чтобы зайти  или "reg" чтоб зарегистрироваться: ')
+#     if cmd=='logncin':    
+#         your_login=input('login: ')
+#         your_password=input('password: ')
+#         for i in range(len(login)):
+#                 if your_login==login[i]:
+#                     if your_password==password[i]:
+#                         print('success')
+#                         while exit==True:
+                             
+                             
+                        
+#     elif cmd=='reg':
+#         login_reg=input('придумай никнейм: ')
+#         password_reg=input('придумай пароль: ')
+#         login.append(login_reg)
+#         password.append(password_reg)
+#         print('вы зарегистрированы')
+i=-1
+p=0
+for l in range(0,12):
+    i=i+2
+    p=p+2
+    print(i,'первый')
+    print(p, 'второй')
+print(p , 'расчет окончен')
         
 
 
