@@ -135,6 +135,7 @@
 # else:
 #     print('ghost hz')
 
+
 # login=['shadow fiend' ,'pudge' ,'zxc']
 # password=['ezmid','123zxc','qwe']
 # your_login=input('login:')
@@ -148,49 +149,99 @@
 #     print(i)
 # else:
 #     print('ghost of kiev is kall ')
-# def passch():
-#      np=password[i]
-# login=['shadow fiend' ,'pudge' ,'zxc']
-# password=['ezmid','123zxc','qwe']
-# exit=False
-# while True:
-#     cmd=input('напиши "lognin" чтобы зайти  или "reg" чтоб зарегистрироваться: ')
-#     if cmd=='logncin':    
-#         your_login=input('login: ')
-#         your_password=input('password: ')
-#         for i in range(len(login)):
-#                 if your_login==login[i]:
-#                     if your_password==password[i]:
-#                         print('success')
-#                         while exit==True:
-                             
-                             
-                        
-#     elif cmd=='reg':
-#         login_reg=input('придумай никнейм: ')
-#         password_reg=input('придумай пароль: ')
-#         login.append(login_reg)
-#         password.append(password_reg)
-#         print('вы зарегистрированы')
-i=-1
-p=0
-for l in range(0,12):
-    i=i+2
-    p=p+2
-    print(i,'первый')
-    print(p, 'второй')
-print(p , 'расчет окончен')
-        
 
+# def login_c():
+#     n_login=input('new login: ')
+#     login[i]=n_login
+#     print(login, i)
+#     print('login has been changed')
+#     file=open(name+'.txt','w')
+#     for i in login:
+#         file.write(i+'\n')
+# def write(name):
+#      file=open(name+'.txt','w')
+#     for i in password:
+#         file.write(i+'\n')
 
+def reg1():
+def write():
+def help():
+    print()
+    print()
+    print()
     
+def password_c():
+    n_password=input('new password: ')
+    password[i]=n_password
+    print(password, i)
+    file=open('password.txt','w')
+    for q in password:
+        file.write(q+'\n')
+    print('password has been changed')
+def read(name):
+    file=open(name+'.txt','r')
+    data=file.read().split('\n')
+    for i in range(len(data)):
+        if data[i] == '':
+            del(data[i])
+    print(data)
+    return data
+login=read('login')
+password=read('password')
 
-
-
-
-
-	
-
-	
-	
-
+while True:
+    cmd=input('напиши "login" чтобы зайти  или "reg" чтоб зарегистрироваться: ')
+    if cmd=='login':    
+        your_login=input('login: ')
+        your_password=input('password: ')
+        for i in range(len(login)):
+                if your_login==login[i]:
+                    if your_password==password[i]:
+                        print('success')
+                        exit=False
+                        while exit==False:
+                            cmd=input('change password or logout?: ')
+                            if cmd=='change password':
+                                password_c()
+                            elif cmd=='logout':
+                                exit=True
+                            else:
+                                print('invalid command')
+                        else:
+                            break                       
+    elif cmd=='reg':
+        login_reg=input('придумай никнейм: ')
+        password_reg=input('придумай пароль: ')
+        login.append(login_reg)
+        password.append(password_reg)
+        print('вы зарегистрированы')
+# file=open('text.txt','w')
+# file.write('zxc\n')
+# file.write('qwe\n')
+# file.write('mid\n')
+# file.write('ezgg\n')
+# file.write('ggwp\n')
+# file.write('pudge\n')
+# file.close()
+# file=open('text.txt','r')
+# data=file.read().split('\n')
+# for i in range(len(data)):
+#     if data[i] == '':
+#         del(data[i])
+# print(data)
+# file=open('login.txt','w')
+# file.write('zxc\n')
+# file.write('qwe\n')
+# file.write('mid\n')
+# file.write('ezgg\n')
+# file.write('ggwp\n')
+# file.write('pudge\n')
+# file.close()
+# file=open('password.txt','w')
+# file.write('zxc\n')
+# file.write('qwe\n')
+# file.write('mid\n')
+# file.write('ezgg\n')
+# file.write('ggwp\n')
+# file.write('pudge\n')
+# file.close()
