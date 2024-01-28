@@ -189,6 +189,12 @@
 # file.write('ggwp\n')
 # file.write('pudge\n')
 # file.close()
+def cipher(str,key):
+    encrypt_str=''
+    for letter in str:
+        encrypt_str += chr(ord(letter)^key)
+    return encrypt_str
+
 def signup():
     login_temp=input('reg your login: ')
     password_temp=input('reg your password: ')
@@ -205,14 +211,18 @@ def password_changer():
 def write(name, lists):
     file=open(name+'.txt', 'w')
     for k in lists:
-        file.write(k+'\n')
+        data_e=cipher(k, key)
+        file.write(data_e+'\n')
+    file.close()
 def read(name):
     file=open(name+'.txt', 'r')
-    data=file.read().split('\n')
+    data_e=file.read().split('\n')
+    data=cipher(data_e, key)
     for i in range(len(data)):
         if data[i]=='':
             del(data[i])
     return data
+key=2
 login=read('login')
 password=read('password')
 while True:
@@ -236,4 +246,3 @@ while True:
                         break
     elif cmd=='signup':
         signup()
-12312313
