@@ -14,12 +14,13 @@
 #     print(i,'первый')
 #     print(p, 'второй')
 # print(p , 'расчет окончен')
-from random import choice
-ans = ['может быть да','категорически нет','да','возможно нет','вроде верно']
-while True :
-    que=input('задайте вопрос магическому шару: ')
-    choice(ans)
-    print(choice(ans))
-    with open('magic_ball.txt','a')as file:
-        file.write(que+':'+choice(ans)+'\n')   
+# from random import choice
+# ans = ['может быть да','категорически нет','да','возможно нет','вроде верно']
+# while True :
+#     que=input('задайте вопрос магическому шару: ')
+#     choice(ans)
+#     print(choice(ans))
+#     with open('magic_ball.txt','a')as file:
+#         file.write(que+':'+choice(ans)+'\n')   
+
 

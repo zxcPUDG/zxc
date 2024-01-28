@@ -189,61 +189,50 @@
 # file.write('ggwp\n')
 # file.write('pudge\n')
 # file.close()
-
-def write(name):
-    file=open(name+'.txt','w')
-    for i in password:
-        file.write(i+'\n')
-
-def reg1():
-def write():
-def help():
-    print()
-    print()
-    print()
-    
-def password_c():
-    n_password=input('new password: ')
-    password[i]=n_password
-    print(password, i)
-    file=open('password.txt','w')
-    for q in password:
-        file.write(q+'\n')
+def signup():
+    login_temp=input('reg your login: ')
+    password_temp=input('reg your password: ')
+    login.append(login_temp)
+    password.append(password_temp)
+    write('login',login)
+    write('password',password)
+    print('success')
+def password_changer():
+    new_password=input('new password: ')
+    password[i]=new_password
     print('password has been changed')
+    return password
+def write(name, lists):
+    file=open(name+'.txt', 'w')
+    for k in lists:
+        file.write(k+'\n')
 def read(name):
-    file=open(name+'.txt','r')
+    file=open(name+'.txt', 'r')
     data=file.read().split('\n')
     for i in range(len(data)):
-        if data[i] == '':
+        if data[i]=='':
             del(data[i])
-    print(data)
     return data
 login=read('login')
 password=read('password')
-
 while True:
-    cmd=input('напиши "login" чтобы зайти  или "reg" чтоб зарегистрироваться: ')
-    if cmd=='login':    
-        your_login=input('login: ')
-        your_password=input('password: ')
+    cmd=input('signup to reg new account  or signin to signin your account: ')
+    if cmd=='signin':
+        your_login=input('input login: ')
+        your_password=input('input password: ')
         for i in range(len(login)):
-                if your_login==login[i]:
-                    if your_password==password[i]:
-                        print('success')
-                        exit=False
-                        while exit==False:
-                            cmd=input('change password or logout?: ')
-                            if cmd=='change password':
-                                password_c()
-                            elif cmd=='logout':
-                                exit=True
-                            else:
-                                print('invalid command')
+            if your_login==login[i]:
+                if your_password==password[i]:
+                    exit=False
+                    while exit==False:
+                        cmd=input('logout to logout or change password to change password: ')
+                        if cmd=='change password':
+                            password=password_changer()
+                        elif cmd=='logout':
+                            exit=True
                         else:
-                            break                       
-    elif cmd=='reg':
-        login_reg=input('придумай никнейм: ')
-        password_reg=input('придумай пароль: ')
-        login.append(login_reg)
-        password.append(password_reg)
-        print('вы зарегистрированы')
+                            print('invalid command')
+                    else:
+                        break
+    elif cmd=='signup':
+        signup()
