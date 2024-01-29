@@ -22,5 +22,28 @@
 #     print(choice(ans))
 #     with open('magic_ball.txt','a')as file:
 #         file.write(que+':'+choice(ans)+'\n')   
+def plus(a,b):
+    c=a+b
+    print('результат суммирования: ', c)
+def minus(a,b):
+    c=a-b
+    print('результат вычетания: ', c)
+def multiply(a,b):
+    c=a*b
+    print('результат умножения: ', c)
+def divide(a,b):
+    c=a/b
+    print('результат деления: ', c)
 
-
+while True:
+    a=int(input('введите первое число: '))   
+    w=input('какое действие?( +,-,*,/ ): ')
+    b=int(input('введите второе число: ')) 
+    if w=='+':
+        plus(a,b)
+    elif w=='-':
+        minus(a,b)
+    elif w=='*':
+        multiply(a,b)
+    elif w=='/':
+        divide(a,b)
